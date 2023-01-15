@@ -5,5 +5,5 @@ __pycache__
 *.env
 .env
 .idea
-src/Django_TDD_App/migrations/*
+src/DJANGO_TDD_App/migrations/*
 src/posts/migrations/*
