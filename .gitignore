@@ -1,0 +1,9 @@
+venv/
+*.sqlite3
+__pycache__/
+__pycache__
+*.env
+.env
+.idea
+src/Django_TDD_App/migrations/*
+src/posts/migrations/*
