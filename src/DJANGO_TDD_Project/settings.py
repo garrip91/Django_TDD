@@ -26,18 +26,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 env = environ.Env(
     # set casting, default value
     DEBUG=(bool, False),
-    #EMAIL_PORT=(int, 0),
-    #EMAIL_USE_TLS=(bool, False),
-    #EMAIL_USE_SSL=(bool, False)
+    # EMAIL_PORT=(int, 0),
+    # EMAIL_USE_TLS=(bool, False),
+    # EMAIL_USE_SSL=(bool, False)
 )
 
-environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
+environ.Env.read_env(os.path.join(BASE_DIR, ".env"))
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env('SECRET_KEY')
+SECRET_KEY = env("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env('DEBUG')
+DEBUG = env("DEBUG")
 
 ALLOWED_HOSTS = []
 # ALLOWED_HOSTS = ['*']
@@ -51,10 +51,9 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-
-    'DJANGO_TDD_App.apps.DjangoTddAppConfig',
+    "DJANGO_TDD_App.apps.DjangoTddAppConfig",
     #'posts.apps.PostsConfig',
-    'posts',
+    "posts",
 ]
 
 MIDDLEWARE = [
@@ -72,7 +71,7 @@ ROOT_URLCONF = "DJANGO_TDD_Project.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [BASE_DIR / 'templates'],
+        "DIRS": [BASE_DIR / "templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -98,15 +97,15 @@ DATABASES = {
     }
 }
 # DATABASES = {
-    # 'default': {
-        # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        # 'NAME': 'KinomonsterDatabase',
-        # 'USER': 'admin',
-        # 'PASSWORD': 'admin',
-        # #'HOST': 'localhost',
-        # 'HOST': '213.139.209.173',
-        # 'PORT': '5432'
-    # }
+# 'default': {
+# 'ENGINE': 'django.db.backends.postgresql_psycopg2',
+# 'NAME': 'KinomonsterDatabase',
+# 'USER': 'admin',
+# 'PASSWORD': 'admin',
+# #'HOST': 'localhost',
+# 'HOST': '213.139.209.173',
+# 'PORT': '5432'
+# }
 # }
 
 # Password validation
@@ -131,9 +130,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
-LANGUAGE_CODE = 'ru-RU'
+LANGUAGE_CODE = "ru-RU"
 
-TIME_ZONE = 'Europe/Moscow'
+TIME_ZONE = "Europe/Moscow"
 
 USE_I18N = True
 
@@ -143,8 +142,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = '/static/'
-STATIC_DIR = BASE_DIR / 'static'
+STATIC_URL = "/static/"
+STATIC_DIR = BASE_DIR / "static"
 STATICFILES_DIRS = [STATIC_DIR]
 # STATICFILES_DIRS = [
 #     BASE_DIR / 'static'
@@ -156,16 +155,16 @@ STATICFILES_DIRS = [STATIC_DIR]
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media"
 
 
-#EMAIL_BACKEND = env('EMAIL_BACKEND')
-#EMAIL_HOST = env('EMAIL_HOST')
-#EMAIL_PORT = env('EMAIL_PORT')
-#EMAIL_HOST_USER = env('EMAIL_HOST_USER')
-#EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
-#EMAIL_USE_TLS = env('EMAIL_USE_TLS')
-#EMAIL_USE_SSL = env('EMAIL_USE_SSL')
+# EMAIL_BACKEND = env('EMAIL_BACKEND')
+# EMAIL_HOST = env('EMAIL_HOST')
+# EMAIL_PORT = env('EMAIL_PORT')
+# EMAIL_HOST_USER = env('EMAIL_HOST_USER')
+# EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
+# EMAIL_USE_TLS = env('EMAIL_USE_TLS')
+# EMAIL_USE_SSL = env('EMAIL_USE_SSL')
 
 # SECURE_SSL_REDIRECT = True
