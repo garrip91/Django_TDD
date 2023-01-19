@@ -7,3 +7,5 @@ __pycache__
 .idea
 src/DJANGO_TDD_App/migrations/*
 src/posts/migrations/*
+src/htmlcov/*
+src/.coverage
