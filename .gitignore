@@ -9,3 +9,4 @@ src/DJANGO_TDD_App/migrations/*
 src/posts/migrations/*
 src/htmlcov/*
 src/.coverage
+src/run_test_command.txt
