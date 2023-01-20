@@ -1,0 +1,2 @@
+Команда для запуска тестов после установки пакета/библиотеки "model-bakery":
+    ~.../src$ coverage run manage.py test
