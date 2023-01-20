@@ -15,6 +15,7 @@ class PostAuthorTest(TestCase):
             body="test body",
             author=self.user
         )
+        # print(Post._meta.fields)
     
     def test_author_is_instance_of_user_model(self):
         self.assertTrue(isinstance(self.user, User))
