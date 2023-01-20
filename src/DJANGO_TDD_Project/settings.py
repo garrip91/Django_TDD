@@ -51,10 +51,10 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "DJANGO_TDD_App.apps.DjangoTddAppConfig",
     
-    #"posts.apps.PostsConfig",
-    "posts",
+    #"DJANGO_TDD_App.apps.DjangoTddAppConfig",
+    #"posts",
+    "posts.apps.PostsConfig",
     "accounts.apps.AccountsConfig",
 ]
 
