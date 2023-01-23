@@ -1,6 +1,7 @@
-from django.shortcuts import render
-
+from django.shortcuts import render, redirect
+from django.urls import reverse
 from .models import Post
+from .forms import PostCreationForm
 
 
 def index(request):
@@ -14,3 +15,17 @@ def post_detail(request, id):
         "title": post.title
     }
     return render(request, "posts/detail.html", context)
+
+def create_post(request):
+    form = PostCreationForm()
+    if request.method == "POST":
+        form = PostCreationForm(request.POST)
+        if form.is_valid():
+            form_obj = form.save(commit=False)
+            form_obj.author = request.user
+            form_obj.save()
+            return redirect(reverse("homepage"))
+    context = {
+        "form": form
+    }
+    return render(request, "posts/createpost.html", context)
