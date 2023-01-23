@@ -110,6 +110,10 @@ DATABASES = {
 # }
 # }
 
+# EMAIL SETTINGS:
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+#SITE_ID = 1
+
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
