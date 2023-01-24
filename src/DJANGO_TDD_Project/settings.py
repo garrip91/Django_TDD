@@ -56,7 +56,12 @@ INSTALLED_APPS = [
     #"posts",
     "posts.apps.PostsConfig",
     "accounts.apps.AccountsConfig",
+
+    # 3-rd party apps:
+    "crispy_forms",
 ]
+
+CRISPY_TEMPLATE_PACK = "bootstrap"
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
