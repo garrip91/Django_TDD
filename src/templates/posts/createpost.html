@@ -6,6 +6,7 @@
         <h1>Create Post</h1>
         {% csrf_token %}
         {{ form|crispy }}
+        <br />
         <input type="submit" value="Post" class="btn btn-primary" />
     </form>
     <br />
