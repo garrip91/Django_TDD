@@ -1,6 +1,6 @@
 from django.urls import path
 from django.contrib.auth import views as auth_views
-from .views import register_user, login_page, logout_user, current_user_profile
+from .views import register_user, login_page, logout_user, current_user_profile, update_user_profile
 
 
 urlpatterns = [
@@ -21,4 +21,5 @@ urlpatterns = [
         template_name = "accounts/password_reset_complete.html"
     ), name="password_reset_complete"),
     path("current_user_profile/", current_user_profile, name="current_user_profile"),
+    path("update_user_profile/", update_user_profile, name="update_user_profile"),
 ]
