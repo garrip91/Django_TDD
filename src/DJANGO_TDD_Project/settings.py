@@ -52,7 +52,6 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     
-    #"DJANGO_TDD_App.apps.DjangoTddAppConfig",
     #"posts",
     "posts.apps.PostsConfig",
     "accounts.apps.AccountsConfig",
