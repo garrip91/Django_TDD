@@ -1,0 +1,26 @@
+#version: '3.7'
+version: "2.15.1"
+
+services:
+  #dm_db:
+  db:
+    #image: postgres:10.1-alpine
+    image: sqlite3:3.37.2
+    volumes:
+      #- postgres_data:/var/lib/postgresql/data/
+      - sqlite3_data:/usr/bin/
+    ports:
+      #- 5435:5432
+  #dm_web:
+  web:
+    #build: .
+    #command: python /usr/src/dm_rest/manage.py runserver 0.0.0.0:8000
+    #volumes:
+      #- .:/usr/src/dm_rest
+    ports:
+      - 8000:8000
+    depends_on:
+      #- dm_db
+      - db
+volumes:
+  sqlite3_data:
