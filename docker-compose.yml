@@ -1,26 +1,20 @@
-#version: '3.7'
-version: "2.15.1"
+version: "3.9"
 
 services:
-  #dm_db:
   db:
-    #image: postgres:10.1-alpine
-    image: sqlite3:3.37.2
+    image: postgres
     volumes:
-      #- postgres_data:/var/lib/postgresql/data/
-      - sqlite3_data:/usr/bin/
-    ports:
-      #- 5435:5432
-  #dm_web:
+      - ./data/db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=DjangoTDDDatabase
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
   web:
-    #build: .
-    #command: python /usr/src/dm_rest/manage.py runserver 0.0.0.0:8000
-    #volumes:
-      #- .:/usr/src/dm_rest
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
     ports:
-      - 8000:8000
+      - "8000:8000"
     depends_on:
-      #- dm_db
       - db
-volumes:
-  sqlite3_data:

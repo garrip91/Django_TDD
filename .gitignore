@@ -1,5 +1,6 @@
 venv/
 *.sqlite3
+DUMP_FOR_DjangoTDDDatabase.json
 __pycache__/
 __pycache__
 *.env
