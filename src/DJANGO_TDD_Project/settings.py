@@ -105,7 +105,7 @@ WSGI_APPLICATION = "DJANGO_TDD_Project.wsgi.application"
 """ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "DjangoTDDDatabase",
+        "NAME": "django_tdd_database",
         #"USER": "postgres",
         "PASSWORD": "postgres",
         "HOST": "localhost",
