@@ -6,9 +6,6 @@ __pycache__
 *.env
 .env
 .idea
-src/DJANGO_TDD_App/migrations/*
-src/posts/migrations/*
-src/accounts/migrations/*
 src/htmlcov/*
 src/.coverage
 src/run_test_command.txt
