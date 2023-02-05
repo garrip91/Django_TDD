@@ -1,0 +1,9 @@
+black==22.12.0
+coverage==7.0.5
+Django==4.1.5
+django-crispy-forms==1.14.0
+django-environ==0.9.0
+gunicorn==20.1.0
+libgravatar==1.0.3
+model-bakery==1.9.0
+psycopg2-binary==2.9.5 # pip install psycopg2-binary

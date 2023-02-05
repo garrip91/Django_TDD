@@ -1,0 +1,9 @@
+venv/
+*.sqlite3
+DUMP_FOR_DjangoTDDDatabase.json
+config/.env
+*.pyc
+.idea
+src/htmlcov/*
+src/.coverage
+src/run_test_command.txt

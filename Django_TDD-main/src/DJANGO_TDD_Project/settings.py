@@ -28,9 +28,6 @@ env = environ.Env(
     # EMAIL_USE_SSL=(bool, False)
 )
 
-#environ.Env.read_env(os.path.join(BASE_DIR, ".env"))
-environ.Env.read_env(os.path.join(BASE_DIR.parent, "config", ".env"))
-
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = env("SECRET_KEY")
 
@@ -94,12 +91,12 @@ WSGI_APPLICATION = "DJANGO_TDD_Project.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-#DATABASES = {
+# DATABASES = {
 #    "default": {
 #        "ENGINE": "django.db.backends.sqlite3",
 #        "NAME": BASE_DIR / "db.sqlite3",
 #    }
-#}
+# }
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
