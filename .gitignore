@@ -4,7 +4,7 @@ DUMP_FOR_DjangoTDDDatabase.json
 __pycache__/
 __pycache__
 *.env
-.env
+config/.env
 .idea
 src/htmlcov/*
 src/.coverage
